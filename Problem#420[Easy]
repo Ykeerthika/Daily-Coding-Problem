@@ -1,0 +1,25 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println(perfectNum(15));//154
+        System.out.println("Try programiz.pro");
+    }
+    
+    static int perfectNum(int n){
+        int cnt=0,i;
+        for(i=19;;i++){
+            int res=i,sum=0;
+            while (res != 0) {
+            sum = sum + res % 10;
+            res = res / 10;
+        }
+            if(sum==10) cnt++;
+            if(cnt==n){
+                return i;
+            }
+
+        }
+    }
+}
